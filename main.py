@@ -22,7 +22,7 @@ if not gemini_api_key:
 genai.configure(api_key=gemini_api_key)
 
 # Streamlit UI setup
-st.title("🚀 RockyBot: News Research Tool 📈")
+st.title("🚀News Research Tool 📈")
 st.sidebar.title("🔍 Enter News Article URLs")
 
 # Collect URLs from sidebar
@@ -117,7 +117,7 @@ if query:
             st.write(response.text if hasattr(response, 'text') else response)
 
             # Show the unique source URLs that contributed to the answer
-            st.subheader("📌 Sources (most relevant):")
+            st.subheader("📌 Sources:")
             for source in sources:
                 st.write(f"🔗 [{source}]({source})")
 
